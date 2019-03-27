@@ -8,12 +8,12 @@ public class BulletShoot : MonoBehaviour {
   
 	// Use this for initialization
 	void Start () {
-		
+        Destroy(gameObject, 10);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        transform.right = GetComponent<Rigidbody2D>().velocity;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-    public float speed = 2f;
+    public float speed = 10f;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,5 +21,9 @@ public class Movement : MonoBehaviour {
 
         if (move < 0) GetComponent<Rigidbody2D> ().velocity = new Vector3(move * speed, GetComponent<Rigidbody2D>().velocity.y);
         if (move > 0) GetComponent<Rigidbody2D> ().velocity = new Vector3(move * speed, GetComponent<Rigidbody2D>().velocity.y);
+
+        float move2 = Input.GetAxis("Horizontal2");
+
+
     }
 }
